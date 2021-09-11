@@ -128,7 +128,7 @@ describe('DevicesController', () => {
       signal: -97
     };
     await controller.createDevice(proofDevice);
-    expect(await (controller.updateDevice(id, proofDevice))).toMatchObject(proofDevice);
+    expect(await (controller.updateDevice(id, proofUpdateDevice))).toMatchObject({id, ...proofUpdateDevice});
   });
 
 });
