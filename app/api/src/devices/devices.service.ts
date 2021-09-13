@@ -24,7 +24,7 @@ export class DevicesService {
     const storedDevices = await this.readDevicesFile();
     const deviceToUpdateIndex = storedDevices.findIndex(device => device.id === deviceId);
     if (deviceToUpdateIndex === -1) return errorStrings.deviceIdNotFound;
-    storedDevices[deviceToUpdateIndex] = { id: storedDevices[deviceToUpdateIndex].id, ...updatedData };
+    storedDevices[deviceToUpdateIndex] = { ...storedDevices[deviceToUpdateIndex], ...updatedData };
     await this.writeOnDevicesFile(storedDevices);
     return storedDevices[deviceToUpdateIndex];
   }
