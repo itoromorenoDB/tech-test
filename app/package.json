@@ -1,0 +1,12 @@
+{
+  "name": "cima-app",
+  "version": "1.0.0",
+  "description": "This is a tech test",
+  "main": "index.js",
+  "scripts": {
+    "install-and-start-api": "cd api && npm install && npm start",
+    "install-and-start-ui": "cd ui && npm install && set PORT=3001 && npm start"
+  },
+  "author": "Ivan Toromoreno",
+  "license": "ISC"
+}

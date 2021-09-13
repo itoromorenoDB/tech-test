@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "43399259-e9d4-431d-af5e-55b71031e1f9",
+		"name": "tech-test-cima",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Device",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"11111111111111\",\r\n    \"location\": 222,\r\n    \"mac_address\": \"19-59-asdada\",\r\n    \"connected\": true,\r\n    \"parent_location\": 17,\r\n    \"updated_at\": \"2018-02-27T13:21:29Z\",\r\n    \"signal\": -97\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Devices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete device",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/devices/11111111111111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"devices",
+						"11111111111111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Object",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"location\": 222,\r\n    \"mac_address\": \"19-59-gegegeggag\",\r\n    \"connected\": true,\r\n    \"parent_location\": 17,\r\n    \"updated_at\": \"2018-02-27T13:21:29Z\",\r\n    \"signal\": -97\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/devices/11111111111111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"devices",
+						"11111111111111"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
